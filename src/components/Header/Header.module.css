@@ -1,0 +1,29 @@
+.app_header {
+    background-color: rgba(0, 0, 0, 0.5);
+    grid-area: h;
+
+}
+
+.app_header img {
+    height: 100%;
+}
+
+.loginBlock {
+    float: right;
+    height: 100%;
+    display: flex;
+}
+.loginBlock button {
+    cursor: pointer;
+}
+
+.loginBlock a {
+    line-height: 60px;
+    font-size: 26px;
+}
+.loginBlock_accPlusLogout {
+    display: flex;
+}
+.loginBlock_accPlusLogout button{
+    display: inline-block;
+}

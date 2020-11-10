@@ -1,0 +1,28 @@
+.app_nav {
+  background-color: #427aa1;
+  grid-area: n;
+}
+.navList {
+  margin-bottom: 40px;
+}
+.navList a {
+  text-decoration: none;
+  /*color: white;*/
+}
+.item {
+  list-style: none;
+}
+.item a {
+  color: white;
+}
+.item a.activeLink {
+  color: gold;
+}
+.friends {
+  padding: 10px;
+
+}
+.friendsItems {
+  display: flex;
+  flex-wrap: wrap;
+}
