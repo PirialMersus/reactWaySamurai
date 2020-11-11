@@ -1,7 +1,9 @@
 .selectedPage {
     font-weight: bold;
 }
-span {
+
+.paginatorsRow span {
     cursor: pointer;
+    margin-right: 2px;
 
 }

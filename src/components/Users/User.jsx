@@ -4,7 +4,6 @@ import userPhoto from "../../assets/images/user.png";
 import {NavLink} from "react-router-dom";
 
 let User = ({user, followingInProgress, unfollow, follow}) => {
-
     return (
         <div>
             <span>
