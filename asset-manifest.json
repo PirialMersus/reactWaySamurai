@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/reactWaySamurai/static/css/main.69160dd4.chunk.css",
+    "main.js": "/reactWaySamurai/static/js/main.c95a8421.chunk.js",
+    "main.js.map": "/reactWaySamurai/static/js/main.c95a8421.chunk.js.map",
+    "runtime-main.js": "/reactWaySamurai/static/js/runtime-main.72c45e99.js",
+    "runtime-main.js.map": "/reactWaySamurai/static/js/runtime-main.72c45e99.js.map",
+    "static/js/2.1c4f1ca2.chunk.js": "/reactWaySamurai/static/js/2.1c4f1ca2.chunk.js",
+    "static/js/2.1c4f1ca2.chunk.js.map": "/reactWaySamurai/static/js/2.1c4f1ca2.chunk.js.map",
+    "static/css/3.caf31ad6.chunk.css": "/reactWaySamurai/static/css/3.caf31ad6.chunk.css",
+    "static/js/3.45916bd7.chunk.js": "/reactWaySamurai/static/js/3.45916bd7.chunk.js",
+    "static/js/3.45916bd7.chunk.js.map": "/reactWaySamurai/static/js/3.45916bd7.chunk.js.map",
+    "static/css/4.c94a14ac.chunk.css": "/reactWaySamurai/static/css/4.c94a14ac.chunk.css",
+    "static/js/4.eafa2ef7.chunk.js": "/reactWaySamurai/static/js/4.eafa2ef7.chunk.js",
+    "static/js/4.eafa2ef7.chunk.js.map": "/reactWaySamurai/static/js/4.eafa2ef7.chunk.js.map",
+    "index.html": "/reactWaySamurai/index.html",
+    "precache-manifest.0c55347691878e2dede88d988f74cee4.js": "/reactWaySamurai/precache-manifest.0c55347691878e2dede88d988f74cee4.js",
+    "service-worker.js": "/reactWaySamurai/service-worker.js",
+    "static/css/3.caf31ad6.chunk.css.map": "/reactWaySamurai/static/css/3.caf31ad6.chunk.css.map",
+    "static/css/4.c94a14ac.chunk.css.map": "/reactWaySamurai/static/css/4.c94a14ac.chunk.css.map",
+    "static/css/main.69160dd4.chunk.css.map": "/reactWaySamurai/static/css/main.69160dd4.chunk.css.map",
+    "static/js/2.1c4f1ca2.chunk.js.LICENSE.txt": "/reactWaySamurai/static/js/2.1c4f1ca2.chunk.js.LICENSE.txt",
+    "static/media/arni.png": "/reactWaySamurai/static/media/arni.59ff89f9.png",
+    "static/media/facebook-app-logo.svg": "/reactWaySamurai/static/media/facebook-app-logo.ffa50fc4.svg",
+    "static/media/github.svg": "/reactWaySamurai/static/media/github.e4f2d6b0.svg",
+    "static/media/instagram.svg": "/reactWaySamurai/static/media/instagram.b1c58ee1.svg",
+    "static/media/internet.svg": "/reactWaySamurai/static/media/internet.53b9845e.svg",
+    "static/media/loading.svg": "/reactWaySamurai/static/media/loading.27fc27b6.svg",
+    "static/media/twitter.svg": "/reactWaySamurai/static/media/twitter.dd90206d.svg",
+    "static/media/user.png": "/reactWaySamurai/static/media/user.93a57c9f.png",
+    "static/media/vk.svg": "/reactWaySamurai/static/media/vk.9eaa3aa7.svg",
+    "static/media/youtube.svg": "/reactWaySamurai/static/media/youtube.a6372485.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.72c45e99.js",
+    "static/js/2.1c4f1ca2.chunk.js",
+    "static/css/main.69160dd4.chunk.css",
+    "static/js/main.c95a8421.chunk.js"
+  ]
+}
