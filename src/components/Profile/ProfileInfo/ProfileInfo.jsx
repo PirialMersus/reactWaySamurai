@@ -16,11 +16,17 @@ const ProfileInfo = (props) => {
         return <Preloader/>
     }
 
+    const mainPhotoSelected = (e) => {
+        if (e.target.files.length)
+        {props.savePhoto(e.target.files[0])}
+    }
+
     return (
         <div>
             <div className={s.avaPlusDescription}>
                 {props.profile.photos.large ? <img className={s.userPhoto} alt={""} src={props.profile.photos.large}/> :
                     <img className={s.userPhoto} src={arnold} alt="Arni"/>}
+                {props.isOwner && <input type={"file"} onChange={mainPhotoSelected}/>}
 
                 <ProfileStatusWithHooks status={props.status} updateStatus={props.updateStatus}/>
 
@@ -30,19 +36,25 @@ const ProfileInfo = (props) => {
             </div>
             <div className={s.socialNetworks}>
                 {props.profile.contacts.facebook &&
-                <a href={props.profile.contacts.facebook}><img alt={"facebook icon"} className={s.socialIcons} src={facebook}/></a>}
+                <a href={props.profile.contacts.facebook}><img alt={"facebook icon"} className={s.socialIcons}
+                                                               src={facebook}/></a>}
                 {props.profile.contacts.website &&
-                <a href={props.profile.contacts.website}><img alt={"website icon"} className={s.socialIcons} src={website}/></a>}
+                <a href={props.profile.contacts.website}><img alt={"website icon"} className={s.socialIcons}
+                                                              src={website}/></a>}
                 {props.profile.contacts.vk &&
                 <a href={props.profile.contacts.vk}><img alt={"vk icon"} className={s.socialIcons} src={vk}/></a>}
                 {props.profile.contacts.twitter &&
-                <a href={props.profile.contacts.twitter}><img alt={"twitter icon"} className={s.socialIcons} src={twitter}/></a>}
+                <a href={props.profile.contacts.twitter}><img alt={"twitter icon"} className={s.socialIcons}
+                                                              src={twitter}/></a>}
                 {props.profile.contacts.instagram &&
-                <a href={props.profile.contacts.instagram}><img alt={"instagram icon"} className={s.socialIcons} src={instagram}/></a>}
+                <a href={props.profile.contacts.instagram}><img alt={"instagram icon"} className={s.socialIcons}
+                                                                src={instagram}/></a>}
                 {props.profile.contacts.youtube &&
-                <a href={props.profile.contacts.youtube}><img alt={"youtube icon"} className={s.socialIcons} src={youtube}/></a>}
+                <a href={props.profile.contacts.youtube}><img alt={"youtube icon"} className={s.socialIcons}
+                                                              src={youtube}/></a>}
                 {props.profile.contacts.github &&
-                <a href={props.profile.contacts.github}><img alt={"github icon"} className={s.socialIcons} src={github}/></a>}
+                <a href={props.profile.contacts.github}><img alt={"github icon"} className={s.socialIcons}
+                                                             src={github}/></a>}
                 {props.profile.contacts.mainLink && <a href={props.profile.contacts.mainLink}>Основная ссылка</a>}
             </div>
         </div>

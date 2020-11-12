@@ -2,7 +2,7 @@
 import React from "react";
 import "./App.css";
 
-import {BrowserRouter, Route} from "react-router-dom";
+import {HashRouter, Route} from "react-router-dom";
 import Settings from "./components/Settings/Settings";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
@@ -28,7 +28,7 @@ class App extends React.Component {
             return <Preloader/>
         }
         return (
-            <BrowserRouter>
+            <HashRouter>
                 <div className="app-wrapper">
                     <HeaderContainer/>
                     <NavbarContainer/>
@@ -58,7 +58,7 @@ class App extends React.Component {
                         <Route path="/music" render={() => <Music/>}/>
                     </div>
                 </div>
-            </BrowserRouter>
+            </HashRouter>
         );
     }
 }
