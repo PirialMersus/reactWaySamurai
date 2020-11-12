@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "602b36543a3241e462558e1c12f4e5f2",
+    "revision": "81db57fd45dcbfb523bcccc4e9c651de",
     "url": "/reactWaySamurai/index.html"
   },
   {
@@ -8,36 +8,36 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/reactWaySamurai/static/css/3.caf31ad6.chunk.css"
   },
   {
-    "revision": "9a0d6cf169f4bd88cd64",
+    "revision": "8529b5ff64632ee2fcb2",
     "url": "/reactWaySamurai/static/css/4.c94a14ac.chunk.css"
   },
   {
-    "revision": "694056de75e6e6cdf0db",
+    "revision": "557500cf8ac806c6a994",
     "url": "/reactWaySamurai/static/css/main.69160dd4.chunk.css"
   },
   {
-    "revision": "2f62cb530324bcd439d2",
-    "url": "/reactWaySamurai/static/js/2.1c4f1ca2.chunk.js"
+    "revision": "420cee3b5aeaaca14693",
+    "url": "/reactWaySamurai/static/js/2.b3bb8ede.chunk.js"
   },
   {
     "revision": "56729d980da09961afe8d497a21eec12",
-    "url": "/reactWaySamurai/static/js/2.1c4f1ca2.chunk.js.LICENSE.txt"
+    "url": "/reactWaySamurai/static/js/2.b3bb8ede.chunk.js.LICENSE.txt"
   },
   {
     "revision": "f1eb0635a4f4d27a388c",
     "url": "/reactWaySamurai/static/js/3.45916bd7.chunk.js"
   },
   {
-    "revision": "9a0d6cf169f4bd88cd64",
-    "url": "/reactWaySamurai/static/js/4.eafa2ef7.chunk.js"
+    "revision": "8529b5ff64632ee2fcb2",
+    "url": "/reactWaySamurai/static/js/4.db837bda.chunk.js"
   },
   {
-    "revision": "694056de75e6e6cdf0db",
-    "url": "/reactWaySamurai/static/js/main.ab444c51.chunk.js"
+    "revision": "557500cf8ac806c6a994",
+    "url": "/reactWaySamurai/static/js/main.43004bd5.chunk.js"
   },
   {
-    "revision": "6ebb343539411e9d7b08",
-    "url": "/reactWaySamurai/static/js/runtime-main.72c45e99.js"
+    "revision": "7e8155315d2c89913b92",
+    "url": "/reactWaySamurai/static/js/runtime-main.63cc13c0.js"
   },
   {
     "revision": "59ff89f94eb92eb75cc519d80477aaf0",
