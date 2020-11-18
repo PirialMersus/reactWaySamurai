@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/reactWaySamurai/static/css/main.69160dd4.chunk.css",
-    "main.js": "/reactWaySamurai/static/js/main.440f7230.chunk.js",
-    "main.js.map": "/reactWaySamurai/static/js/main.440f7230.chunk.js.map",
+    "main.js": "/reactWaySamurai/static/js/main.72852f49.chunk.js",
+    "main.js.map": "/reactWaySamurai/static/js/main.72852f49.chunk.js.map",
     "runtime-main.js": "/reactWaySamurai/static/js/runtime-main.178eac97.js",
     "runtime-main.js.map": "/reactWaySamurai/static/js/runtime-main.178eac97.js.map",
     "static/js/2.7ec7f340.chunk.js": "/reactWaySamurai/static/js/2.7ec7f340.chunk.js",
@@ -14,7 +14,7 @@
     "static/js/4.bf16441a.chunk.js": "/reactWaySamurai/static/js/4.bf16441a.chunk.js",
     "static/js/4.bf16441a.chunk.js.map": "/reactWaySamurai/static/js/4.bf16441a.chunk.js.map",
     "index.html": "/reactWaySamurai/index.html",
-    "precache-manifest.df6e5b20fd929afe4880d0877c4f607f.js": "/reactWaySamurai/precache-manifest.df6e5b20fd929afe4880d0877c4f607f.js",
+    "precache-manifest.150b5de5dd8eca8ea8ba5f17dd0a3ae0.js": "/reactWaySamurai/precache-manifest.150b5de5dd8eca8ea8ba5f17dd0a3ae0.js",
     "service-worker.js": "/reactWaySamurai/service-worker.js",
     "static/css/3.8e68e8bb.chunk.css.map": "/reactWaySamurai/static/css/3.8e68e8bb.chunk.css.map",
     "static/css/4.c94a14ac.chunk.css.map": "/reactWaySamurai/static/css/4.c94a14ac.chunk.css.map",
@@ -28,6 +28,6 @@
     "static/js/runtime-main.178eac97.js",
     "static/js/2.7ec7f340.chunk.js",
     "static/css/main.69160dd4.chunk.css",
-    "static/js/main.440f7230.chunk.js"
+    "static/js/main.72852f49.chunk.js"
   ]
 }
