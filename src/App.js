@@ -2,7 +2,7 @@
 import React from "react";
 import "./App.css";
 
-import {HashRouter, Route} from "react-router-dom";
+import {HashRouter, Route, Switch, Redirect} from "react-router-dom";
 import Settings from "./components/Settings/Settings";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
@@ -15,12 +15,24 @@ import {initializeApp} from "./redux/app-reducer";
 import Preloader from "./components/common/Preloader/Preloader";
 import store from "./redux/redux-store";
 import {withSuspense} from "./components/hoc/withSuspense";
+
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 const ProfileContainer = React.lazy(() => import("./components/Profile/ProfileContainer"));
 
 class App extends React.Component {
+
+    catchAllUnhandledErrors = (reason) => {
+        // debugger
+        alert(reason.reason.message);
+    }
+
     componentDidMount() {
+
         this.props.initializeApp();
+        window.addEventListener("unhandledrejection", this.catchAllUnhandledErrors);
+    }
+    componentWillUnmount() {
+        window.removeEventListener("unhandledrejection", this.catchAllUnhandledErrors);
     }
 
     render() {
@@ -33,29 +45,36 @@ class App extends React.Component {
                     <HeaderContainer/>
                     <NavbarContainer/>
                     <div className="app-wrapper-content">
-                        <Route
-                            path="/profile/:userId?"
-                            render={withSuspense(ProfileContainer)}
-                        />
-                        <Route
-                            path="/dialogs"
-                            render={withSuspense(DialogsContainer)}
-                        />
-                        <Route
-                            path="/users"
-                            render={() => (
-                                <UsersContainer/>
-                            )}
-                        />
-                        <Route
-                            path="/login"
-                            render={() => (
-                                <LoginPage/>
-                            )}
-                        />
-                        <Route path="/settings" render={() => <Settings/>}/>
-                        <Route path="/news" render={() => <News/>}/>
-                        <Route path="/music" render={() => <Music/>}/>
+                        <Switch>
+                            <Route
+                                exact path="/"
+                                render={() => <Redirect to={"/profile"}/>}
+                            />
+                            <Route
+                                path="/profile/:userId?"
+                                render={withSuspense(ProfileContainer)}
+                            />
+                            <Route
+                                path="/dialogs"
+                                render={withSuspense(DialogsContainer)}
+                            />
+                            <Route
+                                path="/users"
+                                render={() => (
+                                    <UsersContainer/>
+                                )}
+                            />
+                            <Route
+                                path="/login"
+                                render={() => (
+                                    <LoginPage/>
+                                )}
+                            />
+                            <Route path="/settings" render={() => <Settings/>}/>
+                            <Route path="/news" render={() => <News/>}/>
+                            <Route path="/music" render={() => <Music/>}/>
+                            <Route path="*" render={() => <div>404 NOT FOUND</div>}/>
+                        </Switch>
                     </div>
                 </div>
             </HashRouter>
@@ -69,7 +88,7 @@ const mapStateToProps = (state) => ({
 
 const AppContainer = connect(mapStateToProps, {initializeApp})(App);
 
-export const SamuraiJsApp = (props) => {
+export const SamuraiJsApp = () => {
     return <Provider store={store}>
         <AppContainer/>
     </Provider>

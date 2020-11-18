@@ -33,6 +33,7 @@ export const setAuthUserData = (userId, email, login, isAuth, captchaUrl) => ({
     type: SET_USER_DATA,
     payload: {userId, email, login, isAuth, captchaUrl}
 });
+
 export const getCaptchaUrlSuccess = (captchaUrl) => ({
     type: GET_CAPTCHA_URL_SUCCESS,
     payload: {captchaUrl}
