@@ -1,3 +1,11 @@
+type FriendType = {
+    id: number
+    name: string
+    iconAddress:string
+    isFriend: boolean
+}
+type InitialState = typeof initialState
+
 let initialState = {
     friends: [
         {
@@ -63,12 +71,11 @@ let initialState = {
                 "https://i.pinimg.com/originals/73/cb/81/73cb8185bbc42d96b2799eb30389f176.jpg",
             isFriend: true,
         },
-    ],
+    ]  as Array<FriendType>,
 }
 
 
-const sidebarReducer = (state = initialState, action) => {
-
+const sidebarReducer = (state = initialState, action: any) => {
 
     return state;
 }

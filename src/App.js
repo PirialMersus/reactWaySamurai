@@ -1,5 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
+// import "antd/dist/antd.css";
+// import { StepForwardOutlined } from '@ant-design/icons';
+// import { Button } from 'antd';
+
 import "./App.css";
 
 import {HashRouter, Route, Switch, Redirect} from "react-router-dom";
@@ -16,6 +20,8 @@ import Preloader from "./components/common/Preloader/Preloader";
 import store from "./redux/redux-store";
 import {withSuspense} from "./components/hoc/withSuspense";
 
+
+
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 const ProfileContainer = React.lazy(() => import("./components/Profile/ProfileContainer"));
 
@@ -31,6 +37,7 @@ class App extends React.Component {
         this.props.initializeApp();
         window.addEventListener("unhandledrejection", this.catchAllUnhandledErrors);
     }
+
     componentWillUnmount() {
         window.removeEventListener("unhandledrejection", this.catchAllUnhandledErrors);
     }
@@ -73,7 +80,10 @@ class App extends React.Component {
                             <Route path="/settings" render={() => <Settings/>}/>
                             <Route path="/news" render={() => <News/>}/>
                             <Route path="/music" render={() => <Music/>}/>
-                            <Route path="*" render={() => <div>404 NOT FOUND</div>}/>
+                            <Route path="*" render={() => <div>404 NOT FOUND
+                                {/*<Button>Ok</Button>*/}
+                                {/*<StepForwardOutlined />*/}
+                                </div>}/>
                         </Switch>
                     </div>
                 </div>

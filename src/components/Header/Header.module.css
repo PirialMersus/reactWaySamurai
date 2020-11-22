@@ -13,6 +13,7 @@
     height: 100%;
     display: flex;
 }
+
 .loginBlock button {
     cursor: pointer;
 }
@@ -21,9 +22,23 @@
     line-height: 60px;
     font-size: 26px;
 }
+
 .loginBlock_accPlusLogout {
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.loginBlock_accPlusLogout button{
+
+.loginBlock_accPlusLogout p {
+    /*line-height: 60px;*/
+    margin-right: 10px;
+}
+
+.loginBlock_accPlusLogout button {
     display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+}
+.loginBlock a {
+    margin-right: 10px;
 }

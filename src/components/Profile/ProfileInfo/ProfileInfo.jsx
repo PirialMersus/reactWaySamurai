@@ -66,6 +66,7 @@ const ProfileData = ({profile, isOwner, goToEditMode}) => {
                 </div>
                 {profile.lookingForAJob &&
                 <div><b>Ищу работу: </b> <span>Да</span></div>}
+                {profile.lookingForAJobDescription && <div><b>Проф скилы: </b> <span>{profile.lookingForAJobDescription}</span></div>}
                 <div className={s.socialNetworks}>
                     <b>Contacts: </b> {Object.keys(profile.contacts).map(key => {
                     {
