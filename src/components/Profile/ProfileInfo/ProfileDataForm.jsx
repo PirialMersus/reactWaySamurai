@@ -4,7 +4,9 @@ import {reduxForm} from "redux-form";
 import s from "./ProfileInfo.module.css";
 import style from "./../../common/FormsControls/FormsControls.module.css"
 
+
 const ProfileDataForm = ({handleSubmit, profile, error}) => {
+
     return (
         <form onSubmit={handleSubmit}>
             <div>
@@ -47,6 +49,7 @@ const ProfileDataForm = ({handleSubmit, profile, error}) => {
     )
 
 }
+
 
 const ProfileDataFormReduxForm = reduxForm({form: 'edit-profile'})(ProfileDataForm);
 

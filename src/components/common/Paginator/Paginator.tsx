@@ -1,13 +1,26 @@
-import React, {useState} from "react";
-import s from "./Paginator.module.css";
-import cn from "classnames";
+import React, {useState} from 'react'
+import s from './Paginator.module.css'
+import cn from 'classnames'
 
+type PropsType = {
+    totalItemsCount: number
+    pageSize: number
+    currentPage: number
+    onPageChanged: (pageNumber: number) => void
+    portionSize?: number
+}
 
-let Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portionSize = 10}) => {
+const Paginator: React.FC<PropsType> = ({
+                                        totalItemsCount,
+                                        pageSize,
+                                        currentPage,
+                                        onPageChanged,
+                                        portionSize = 10
+                                    }) => {
 
     let pagesCount = Math.ceil(totalItemsCount / pageSize);
 
-    let pages = [];
+    let pages: Array<number> = [];
     for (let i = 1; i <= pagesCount; i++) {
         pages.push(i);
     }
@@ -29,7 +42,7 @@ let Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portion
             .map((p) => {
                 return <span key={p} className={cn({
                     [s.selectedPage]: currentPage === p
-                },s.pageNumber)}
+                }, s.pageNumber)}
                              onClick={(e) => {
                                  onPageChanged(p)
                              }}>{p}</span>
