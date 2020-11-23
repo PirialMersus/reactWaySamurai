@@ -11,6 +11,12 @@ import Preloader from "../../common/Preloader/Preloader";
 import arnold from "../../../assets/images/arni.png"
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import ProfileDataForm from "./ProfileDataForm";
+import {ProfileType} from "../../../types/types";
+
+// type PropsType = {
+//     profile: ProfileType
+//
+// }
 
 const ProfileInfo = (props) => {
 

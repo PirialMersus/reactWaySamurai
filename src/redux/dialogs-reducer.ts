@@ -1,15 +1,15 @@
-import {strict} from "assert"
+import {strict} from "assert";
 
-const ADD_MESSAGE = "ADD-MESSAGE"
+const ADD_MESSAGE = "ADD-MESSAGE";
 
 type DialogType = {
-    id: number
-    name: string
-}
+    id: number;
+    name: string;
+};
 type MessageType = {
-    id: number
-    message: string
-}
+    id: number;
+    message: string;
+};
 
 const initialState = {
     messages: [
@@ -28,16 +28,19 @@ const initialState = {
         {id: 6, name: "Gregorii"},
         {id: 7, name: "Gena"},
     ] as Array<DialogType>,
-}
+};
 
-export type InitialStateType = typeof initialState
+export type InitialStateType = typeof initialState;
 
-const dialogsReducer = (state = initialState, action: {
-    type: string, newMessageBody: string
-}): InitialStateType => {
+const dialogsReducer = (
+    state = initialState,
+    action: {
+        type: string;
+        newMessageBody: string;
+    }
+): InitialStateType => {
     switch (action.type) {
         case ADD_MESSAGE: {
-
             let newMessage = {
                 id: 5,
                 message: action.newMessageBody,
@@ -45,21 +48,22 @@ const dialogsReducer = (state = initialState, action: {
 
             return {
                 ...state,
-                messages: [...state.messages, newMessage]
-            }
+                messages: [...state.messages, newMessage],
+            };
         }
 
         default:
             return state;
     }
-}
+};
 
 type AddMessageActionCreatorType = {
-    type: typeof ADD_MESSAGE
+    type: typeof ADD_MESSAGE;
+    newMessageBody: string;
+};
+
+export const addMessageActionCreator = (
     newMessageBody: string
-}
-
-export const addMessageActionCreator = (newMessageBody: string): AddMessageActionCreatorType => ({type: ADD_MESSAGE, newMessageBody});
-
+): AddMessageActionCreatorType => ({type: ADD_MESSAGE, newMessageBody});
 
 export default dialogsReducer;

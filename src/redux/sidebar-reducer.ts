@@ -4,7 +4,7 @@ type FriendType = {
     iconAddress:string
     isFriend: boolean
 }
-type InitialState = typeof initialState
+type InitialStateType = typeof initialState
 
 let initialState = {
     friends: [
@@ -75,7 +75,7 @@ let initialState = {
 }
 
 
-const sidebarReducer = (state = initialState, action: any) => {
+const sidebarReducer = (state = initialState, action: any): InitialStateType => {
 
     return state;
 }

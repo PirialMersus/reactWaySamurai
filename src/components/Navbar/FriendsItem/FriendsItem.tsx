@@ -2,7 +2,14 @@ import React from "react";
 import s from "./FriendsItem.module.css";
 import {NavLink} from "react-router-dom";
 
-const FriendsItem = (props) => {
+type PropsType = {
+    id: number
+    path: string
+    name: string
+
+}
+
+const FriendsItem: React.FC<PropsType> = (props) => {
     let path = "/friends/" + props.id;
     return (
         <div className={s.friend}>
@@ -12,6 +19,6 @@ const FriendsItem = (props) => {
             </NavLink>
         </div>
     );
-};
+}
 
-export default FriendsItem;
+export default FriendsItem

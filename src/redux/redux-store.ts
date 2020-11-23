@@ -11,7 +11,7 @@ import appReducer from "./app-reducer";
 // @ts-ignore
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-let rootReducer = combineReducers({
+const rootReducer = combineReducers({
     profilePage: profileReducer,
     dialogsPage: dialogsReducer,
     sidebar: sidebarReducer,
@@ -24,7 +24,7 @@ let rootReducer = combineReducers({
 type RootReducerType = typeof rootReducer
 export type AppStateType = ReturnType<RootReducerType>
 
-let store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunkMiddleware)));
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunkMiddleware)));
 
 // @ts-ignore
 window.store = store

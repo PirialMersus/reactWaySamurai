@@ -3,7 +3,19 @@ import s from "./Navbar.module.css";
 import {NavLink} from "react-router-dom";
 import FriendsItem from "./FriendsItem/FriendsItem";
 
-const Navbar = (props) => {
+ export type FriendType = {
+    id: number
+    name: string
+    iconAddress: string
+    isFriend: boolean
+}
+
+type PropsType = {
+    friends: Array<FriendType>
+
+}
+
+const Navbar: React.FC<PropsType> = (props) => {
     let friendsElements = props.friends.map((d) => (
         <FriendsItem name={d.name} id={d.id} path={d.iconAddress} key={d.id}/>
     ));
@@ -48,5 +60,5 @@ const Navbar = (props) => {
             </div>
         </nav>
     );
-};
-export default Navbar;
+}
+export default Navbar
