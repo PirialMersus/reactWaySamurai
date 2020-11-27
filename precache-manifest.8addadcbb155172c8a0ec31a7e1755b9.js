@@ -1,43 +1,43 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5a43dfef007b8a23fc01d33cb5abb036",
+    "revision": "843c77f30297e282caa964f2181cac66",
     "url": "/reactWaySamurai/index.html"
   },
   {
-    "revision": "4f3dbba890431bf2a78e",
+    "revision": "ec364f71c69ab60f259d",
     "url": "/reactWaySamurai/static/css/3.8e68e8bb.chunk.css"
   },
   {
-    "revision": "9ecdc5274ceb6b4beaa3",
+    "revision": "4640b1c464393bc2b846",
     "url": "/reactWaySamurai/static/css/4.c94a14ac.chunk.css"
   },
   {
-    "revision": "76345e4ae4162de24190",
+    "revision": "038fdf6a33699665d85b",
     "url": "/reactWaySamurai/static/css/main.70dcc838.chunk.css"
   },
   {
-    "revision": "74f05645445fb578f4bc",
-    "url": "/reactWaySamurai/static/js/2.23a546fe.chunk.js"
+    "revision": "e993363c3e9fcb7db14d",
+    "url": "/reactWaySamurai/static/js/2.caed7245.chunk.js"
   },
   {
     "revision": "56729d980da09961afe8d497a21eec12",
-    "url": "/reactWaySamurai/static/js/2.23a546fe.chunk.js.LICENSE.txt"
+    "url": "/reactWaySamurai/static/js/2.caed7245.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4f3dbba890431bf2a78e",
-    "url": "/reactWaySamurai/static/js/3.eec99ecc.chunk.js"
+    "revision": "ec364f71c69ab60f259d",
+    "url": "/reactWaySamurai/static/js/3.ef74379b.chunk.js"
   },
   {
-    "revision": "9ecdc5274ceb6b4beaa3",
-    "url": "/reactWaySamurai/static/js/4.e8fafa61.chunk.js"
+    "revision": "4640b1c464393bc2b846",
+    "url": "/reactWaySamurai/static/js/4.7989ecd5.chunk.js"
   },
   {
-    "revision": "76345e4ae4162de24190",
-    "url": "/reactWaySamurai/static/js/main.161322d0.chunk.js"
+    "revision": "038fdf6a33699665d85b",
+    "url": "/reactWaySamurai/static/js/main.841eb1fc.chunk.js"
   },
   {
-    "revision": "bf769eb63930601fbb2f",
-    "url": "/reactWaySamurai/static/js/runtime-main.5f51c5c0.js"
+    "revision": "98332f93661aff1cd19c",
+    "url": "/reactWaySamurai/static/js/runtime-main.0da4a5d7.js"
   },
   {
     "revision": "59ff89f94eb92eb75cc519d80477aaf0",
