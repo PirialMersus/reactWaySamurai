@@ -17,7 +17,7 @@ import LoginPage from "./components/Login/Login";
 import {connect, Provider} from "react-redux";
 import {initializeApp} from "./redux/app-reducer";
 import Preloader from "./components/common/Preloader/Preloader";
-import store from "./redux/redux-store";
+import store, {AppStateType} from "./redux/redux-store";
 import {withSuspense} from "./components/hoc/withSuspense";
 
 
@@ -25,11 +25,18 @@ import {withSuspense} from "./components/hoc/withSuspense";
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 const ProfileContainer = React.lazy(() => import("./components/Profile/ProfileContainer"));
 
-class App extends React.Component {
+type MapPropsType = ReturnType<typeof mapStateToProps>
+type DispatchPropsType = {
+    initializeApp: () => void
+}
 
-    catchAllUnhandledErrors = (reason) => {
-        // debugger
-        alert(reason.reason.message);
+const SuspendedDialogs = withSuspense(DialogsContainer);
+const SuspendedProfile = withSuspense(ProfileContainer);
+
+class App extends React.Component<MapPropsType & DispatchPropsType> {
+
+    catchAllUnhandledErrors = (e: PromiseRejectionEvent) => {
+        alert(e.reason.message);
     }
 
     componentDidMount() {
@@ -59,11 +66,11 @@ class App extends React.Component {
                             />
                             <Route
                                 path="/profile/:userId?"
-                                render={withSuspense(ProfileContainer)}
+                                render={() => <SuspendedProfile />}
                             />
                             <Route
                                 path="/dialogs"
-                                render={withSuspense(DialogsContainer)}
+                                render={() => <SuspendedDialogs />}
                             />
                             <Route
                                 path="/users"
@@ -79,7 +86,10 @@ class App extends React.Component {
                             />
                             <Route path="/settings" render={() => <Settings/>}/>
                             <Route path="/news" render={() => <News/>}/>
-                            <Route path="/music" render={() => <Music/>}/>
+                            <Route path="/music" render={() =>
+                                <div>Music</div>
+                                // <Music/>}
+                            }/>
                             <Route path="*" render={() => <div>404 NOT FOUND
                                 {/*<Button>Ok</Button>*/}
                                 {/*<StepForwardOutlined />*/}
@@ -92,13 +102,13 @@ class App extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: AppStateType) => ({
     initialized: state.app.initialized
 })
 
 const AppContainer = connect(mapStateToProps, {initializeApp})(App);
 
-export const SamuraiJsApp = () => {
+export const SamuraiJsApp: React.FC = () => {
     return <Provider store={store}>
         <AppContainer/>
     </Provider>
