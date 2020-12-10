@@ -4,6 +4,7 @@ import {AppStateType, BaseThunkType, InferActionsTypes} from "./redux-store";
 import {Dispatch} from "redux";
 import {ThunkAction} from "redux-thunk";
 import {usersAPI} from "../api/users-api";
+import {APIResponseType} from "../api/api";
 
 let initialState = {
     users: [] as Array<UserType>,
@@ -90,12 +91,15 @@ export const requestUsers = (page: number, pageSize: number):
     }
 }
 
-const _followUnfollowFlow = async (dispatch: Dispatch<ActionsTypes>, userId: number, apiMethod: any, actionCreator: (userId: number)
-    => ActionsTypes) => {
+const _followUnfollowFlow = async (dispatch: Dispatch<ActionsTypes>,
+                                   userId: number,
+                                   apiMethod: (userId: number) => Promise<APIResponseType>,
+                                   actionCreator: (userId: number)
+                                       => ActionsTypes) => {
     dispatch(actions.toggleFollowingProgress(true, userId));
     let response = await apiMethod(userId);
 
-    if (response.data.resultCode === 0) {
+    if (response.resultCode === 0) {
         dispatch(actionCreator(userId));
     }
     dispatch(actions.toggleFollowingProgress(false, userId));
@@ -103,18 +107,18 @@ const _followUnfollowFlow = async (dispatch: Dispatch<ActionsTypes>, userId: num
 
 export const follow = (userId: number): ThunkType => {
     return async (dispatch) => {
-        await _followUnfollowFlow(dispatch, userId, usersAPI.followUser.bind(usersAPI), actions.followSuccess);
+        await _followUnfollowFlow(dispatch, userId, usersAPI.follow.bind(usersAPI), actions.followSuccess);
     }
 }
 
 export const unfollow = (userId: number): ThunkType => {
     return async (dispatch) => {
-        await _followUnfollowFlow(dispatch, userId, usersAPI.unfollowUser.bind(usersAPI), actions.unfollowSuccess);
+        await _followUnfollowFlow(dispatch, userId, usersAPI.unfollow.bind(usersAPI), actions.unfollowSuccess);
     }
 }
 
 export default usersReducer;
 
 type ActionsTypes = InferActionsTypes<typeof actions>
-type InitialState = typeof initialState;
+export type InitialState = typeof initialState;
 type ThunkType = BaseThunkType<ActionsTypes>
