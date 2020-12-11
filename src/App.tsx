@@ -11,14 +11,14 @@ import Settings from "./components/Settings/Settings";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import NavbarContainer from "./components/Navbar/NavbarContainer";
-import UsersContainer from "./components/Users/UsersContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
-import LoginPage from "./components/Login/Login";
+import {LoginPage} from "./components/Login/Login";
 import {connect, Provider} from "react-redux";
 import {initializeApp} from "./redux/app-reducer";
 import Preloader from "./components/common/Preloader/Preloader";
 import store, {AppStateType} from "./redux/redux-store";
 import {withSuspense} from "./components/hoc/withSuspense";
+import {UsersPage} from "./components/Users/UsersContainer";
 
 
 
@@ -75,13 +75,13 @@ class App extends React.Component<MapPropsType & DispatchPropsType> {
                             <Route
                                 path="/users"
                                 render={() => (
-                                    <UsersContainer pageTitle={"Samurai"}/>
+                                    <UsersPage pageTitle={"Samurai"}/>
                                 )}
                             />
                             <Route
                                 path="/login"
                                 render={() => (
-                                    <LoginPage/>
+                                    <LoginPage />
                                 )}
                             />
                             <Route path="/settings" render={() => <Settings/>}/>
