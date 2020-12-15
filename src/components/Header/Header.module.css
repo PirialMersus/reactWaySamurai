@@ -1,44 +1,46 @@
-.app_header {
-    background-color: rgba(0, 0, 0, 0.5);
-    grid-area: h;
+/*.app_header {*/
+/*    background-color: rgba(0, 0, 0, 0.5);*/
+/*    grid-area: h;*/
 
-}
-
-.app_header img {
-    height: 100%;
-}
-
-.loginBlock {
-    float: right;
-    height: 100%;
-    display: flex;
+/*}*/
+.login {
+    color: rgba(255, 255, 255, 0.65);
 }
 
-.loginBlock button {
-    cursor: pointer;
-}
+/*.app_header img {*/
+/*    height: 100%;*/
+/*}*/
 
-.loginBlock a {
-    line-height: 60px;
-    font-size: 26px;
-}
+/*.loginBlock {*/
+/*    float: right;*/
+/*    height: 100%;*/
+/*    display: flex;*/
+/*}*/
 
-.loginBlock_accPlusLogout {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+/*.loginBlock button {*/
+/*    cursor: pointer;*/
+/*}*/
 
-.loginBlock_accPlusLogout p {
-    /*line-height: 60px;*/
-    margin-right: 10px;
-}
+/*.loginBlock a {*/
+/*    font-size: 26px;*/
+/*}*/
 
-.loginBlock_accPlusLogout button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-right: 10px;
-}
-.loginBlock a {
-    margin-right: 10px;
-}
+/*.loginBlock_accPlusLogout {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.loginBlock_accPlusLogout p {*/
+/*    !*line-height: 60px;*!*/
+/*    !*margin-right: 10px;*!*/
+/*    color: rgba(255, 255, 255, 0.65);*/
+/*}*/
+
+/*.loginBlock_accPlusLogout button {*/
+/*    !*display: inline-block;*!*/
+/*    !*padding: 10px 20px;*!*/
+/*    !*margin-right: 10px;*!*/
+/*}*/
+/*.loginBlock a {*/
+/*    !*margin-right: 10px;*!*/
+/*}*/
