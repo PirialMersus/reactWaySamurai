@@ -16,7 +16,8 @@ import {LoginPage} from "./components/Login/Login";
 import Settings from "./components/Settings/Settings";
 import News from "./components/News/News";
 import s from "./components/Navbar/Navbar.module.css";
-import { Header } from "./components/Header/Header";
+import {Header} from "./components/Header/Header";
+// import ChatPage from "./pages/Chat/ChatPage";
 
 const {SubMenu} = Menu;
 const {Content, Footer, Sider} = Layout;
@@ -24,6 +25,7 @@ const {Content, Footer, Sider} = Layout;
 
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 const ProfileContainer = React.lazy(() => import("./components/Profile/ProfileContainer"));
+const ChatPage= React.lazy(() => import("./pages/Chat/ChatPage"));
 
 type MapPropsType = ReturnType<typeof mapStateToProps>
 type DispatchPropsType = {
@@ -32,6 +34,7 @@ type DispatchPropsType = {
 
 const SuspendedDialogs = withSuspense(DialogsContainer);
 const SuspendedProfile = withSuspense(ProfileContainer);
+const SuspendedChatPage = withSuspense(ChatPage);
 
 class App extends React.Component<MapPropsType & DispatchPropsType> {
 
@@ -59,27 +62,6 @@ class App extends React.Component<MapPropsType & DispatchPropsType> {
             <BrowserRouter>
                 <Layout>
                     <Header/>
-                    {/*<Header className="header">*/}
-                    {/*    <Row>*/}
-                    {/*        <Col span={20}>*/}
-                    {/*            <Menu*/}
-                    {/*                theme="dark"*/}
-                    {/*                mode="horizontal"*/}
-                    {/*                defaultSelectedKeys={['2']}*/}
-                    {/*                style={{lineHeight: '64px'}}>*/}
-
-                    {/*                <Menu.Item key="1">*/}
-                    {/*                    <Link to="/developers">*/}
-                    {/*                        Developers*/}
-                    {/*                    </Link>*/}
-                    {/*                </Menu.Item>*/}
-                    {/*            </Menu>*/}
-                    {/*        </Col>*/}
-                    {/*        <Col span={4}>*/}
-                    {/*            <Avatar style={{backgroundColor: '#87d068'}} icon="user"/>*/}
-                    {/*        </Col>*/}
-                    {/*    </Row>*/}
-                    {/*</Header>*/}
                     <Content style={{padding: '0 50px'}}>
                         <Breadcrumb style={{margin: '16px 0'}}>
                             <Breadcrumb.Item>Home</Breadcrumb.Item>
@@ -90,8 +72,6 @@ class App extends React.Component<MapPropsType & DispatchPropsType> {
                             <Sider width={200} style={{background: '#fff'}}>
                                 <Menu
                                     mode="inline"
-                                    // defaultSelectedKeys={['1']}
-                                    // defaultOpenKeys={['sub1']}
                                     style={{height: '100%'}}
                                 >
                                     {/*<ul className={s.navList}>*/}
@@ -184,7 +164,11 @@ class App extends React.Component<MapPropsType & DispatchPropsType> {
                                             </span>
                                         }
                                     >
-                                        <Menu.Item key="9">option9</Menu.Item>
+                                        <Menu.Item key="9">
+                                            <Link to="/chat">
+                                                Chat
+                                            </Link>
+                                        </Menu.Item>
                                         <Menu.Item key="10">option10</Menu.Item>
                                         <Menu.Item key="11">option11</Menu.Item>
                                         <Menu.Item key="12">option12</Menu.Item>
@@ -223,6 +207,12 @@ class App extends React.Component<MapPropsType & DispatchPropsType> {
                                         <div>Music</div>
                                         // <Music/>}
                                     }/>
+                                    <Route
+                                        path="/chat"
+                                        render={() => (
+                                            <SuspendedChatPage/>
+                                        )}
+                                    />
                                     <Route path="*" render={() => <div>404 NOT FOUND
                                     </div>}/>
                                 </Switch>
